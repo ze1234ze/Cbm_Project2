@@ -79,9 +79,6 @@
 
 
 
-        //$a_result= $a_data_bank->query($a_sql);
-        //$a_antwort= $a_result->fetchAll(PDO::FETCH_ASSOC);
-
         $a_data_bank = null;
     } catch (PDOException $e) {
         echo $e->getMessage();
@@ -117,64 +114,4 @@
 
 </html>
 
-
-
-
-
-
-
-
-
 <?php
-//     foreach ($antwort as $line){
-
-
-
-//         // echo "The Name: "  . $line["name"] . "<br>";
-//         // echo "Describtion: "  . $line["describe"] . "<br>";
-//         // echo "Adress: "  . $line["adress"] . "<br>";
-//         // echo "Kontakt: "  . $line["kontakt"] . "<br>";
-
-
-//     } 
-
-
-// }catch(PDOException $search){
-//     echo $search->getMessage();
-// }
-
-
-// 
-
-// //  per post kommen die daten
-// $artikelnummer = 1002;
-// $produktname = "WLAN Stick";
-// $preis = 19.99;
-// $beschreibung = "Toller Stick";
-// $anzahl = 100;
-
-// $sql = "INSERT INTO produkte(artikelnummer,produktname,preis,beschreibung,anzahl)" .
-//        "VALUES (:artikelnummer,:produktname,:preis,:beschreibung,:anzahl)";
-//        try{
-
-//         $dbh = new PDO(
-//             "mysql:dbname=onlineshop; host=localhost", 
-//             "root", //user name
-//             ""      // password
-//         );
-//         echo "Verbindung hergestellt";
-    
-//         $eingabe = $dbh->prepare($sql);  // wir bereiten den sql befehl vor
-//         $eingabe->bindParam(':artikelnummer', $artikelnummer); // verbinden wir die parameter
-//         $eingabe->bindParam(':produktname', $produktname);
-//         $eingabe->bindParam(':preis', $preis);
-//         $eingabe->bindParam(':beschreibung', $beschreibung);
-//         $eingabe->bindParam(':anzahl', $anzahl);
-//         $eingabe->execute();
-    
-        
-//         $dbh = null; // wir geben das pdo objekt wieder frei
-    
-//     }catch(PDOException $e){
-//         echo $e->getMessage();
-//     }
