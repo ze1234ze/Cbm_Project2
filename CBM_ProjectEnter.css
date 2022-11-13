@@ -8,28 +8,23 @@ body {
 
 h1 {
   font-family: Helvetica, sans-serif;
-  /* color: rgb(255, 255, 255); */
   font-size: 150px;
   transition: all 5.5s ease;
   text-align: center;
   text-transform: uppercase;
-  /* animation: animate 2s ease-in-out infinite alternate;  */
 
 }
 
 h2 {
   font-family: Helvetica, sans-serif;
-  /* color: rgb(255, 255, 255); */
   font-size: 5px;
   text-align: end;
   text-transform: uppercase;
-  /* animation: animate 2s ease-in-out infinite alternate;  */
 
 }
 
 a {
   color: rgb(255, 255, 255);
-  /* Цвет ссылок */
   animation: animate 2s ease-in-out infinite alternate;
 }
 
