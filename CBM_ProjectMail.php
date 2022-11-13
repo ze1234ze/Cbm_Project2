@@ -88,8 +88,6 @@
     $budget = $_POST["budget"];
 
 
-    // $search2 = "SELECT * FROM cbm_projectdata WHERE  emailof = $email;
-
 
     $sql = "INSERT INTO cbm_projectdata(nameof,emailof,ageof,genderof,budgetof)" .
         "VALUES (:name,:email,:age,:gender,:budget)";
@@ -117,8 +115,6 @@
 
     <?php
 
-
-
         $eingabe = $data_bank->prepare($sql);  // wir bereiten den sql befehl vor
 
         $eingabe->bindParam(':name',  $name); // verbinden wir die parameter
@@ -128,10 +124,6 @@
         $eingabe->bindParam(':budget', $budget);
         $eingabe->execute();
 
-
-
-        //$a_result= $a_data_bank->query($a_sql);
-        //$a_antwort= $a_result->fetchAll(PDO::FETCH_ASSOC);
 
         $data_bank = null;
     } catch (PDOException $e) {
@@ -149,8 +141,7 @@ LIMIT 1";
             ""           // password
         );
 
-        // echo "gut";
-
+    
 
 
         $result = $data_bank->query($search);
@@ -160,14 +151,6 @@ LIMIT 1";
 
 
         foreach ($antwort as $line) {
-
-
-
-            // echo "The Name: "  . $line["name"] . "<br>";
-            // echo "Describtion: "  . $line["describe"] . "<br>";
-            // echo "Adress: "  . $line["adress"] . "<br>";
-            // echo "Kontakt: "  . $line["kontakt"] . "<br>";
-
 
         }
     } catch (PDOException $search) {
@@ -186,15 +169,12 @@ LIMIT 1";
     mail($empfaenger, $betreff, $text, $from);
     ?>
 
-
-
     <br></br>
     <br></br>
     <br></br>
     <br></br>
     <br></br>
     <br></br>
-
 
 
     <footer>
